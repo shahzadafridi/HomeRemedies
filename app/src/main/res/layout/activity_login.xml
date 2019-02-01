@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCFCFC">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/login_actionBar"
+        android:layout_width="match_parent"
+        android:background="@color/black_color"
+        android:layout_height="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/sanomat_medium"
+                android:text="HOME REMEDIES AND NATURAL CARE"
+                android:textColor="#e9ffffff"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="233dp"
+        android:layout_height="199dp"
+        android:layout_below="@+id/login_actionBar"
+        android:layout_centerHorizontal="true"
+        android:alpha="0.9"
+        android:background="@drawable/backgroundlogo"
+        android:scaleX="1"
+        android:scaleY="0.9" />
+
+    <LinearLayout
+        android:layout_below="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/login_layout_marginTop"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:textColorHint="#cccccc">
+
+            <EditText
+                android:id="@+id/email_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#ffff"
+                android:drawableLeft="@drawable/user"
+                android:fontFamily="@font/sanomat_regular"
+                android:hint="   Email"
+                android:inputType="textPersonName"
+                android:textColor="@color/black_color"
+                android:textSize="20sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:layout_marginTop="10dp"
+            android:textColorHint="#cccccc">
+
+            <EditText
+                android:id="@+id/password_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#ffff"
+                android:drawableLeft="@drawable/lock"
+                android:fontFamily="@font/sanomat_regular"
+                android:hint="   Password"
+                android:inputType="textPersonName"
+                android:textColor="@color/black_color"
+                android:textSize="20sp" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="309dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/login_button"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/sanomat_medium"
+                android:text="Log In"
+                android:textStyle="bold"
+                android:textColor="@color/text_color" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/newAccount_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/sanomat_medium"
+            android:text="DON'T HAVE AN ACCOUNT YET? SIGN UP"
+            android:textColor="@color/text_hint_color"
+            android:textSize="13dp" />
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/loginasAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="8dp"
+        android:text="Login as admin"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="login_layout_marginTop">10dp</dimen>
+    <dimen name="login_logo_height">260dp</dimen>
+</resources>

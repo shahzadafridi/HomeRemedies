@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.opriday.homeremedies.MainActivity">
+
+    <ListView
+        android:id="@+id/listView_pending"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"/>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinator_pending"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
