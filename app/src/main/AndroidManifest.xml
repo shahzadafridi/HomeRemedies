@@ -3,55 +3,89 @@
     package="com.example.opriday.homeremedies">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:fullBackupOnly="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".Remedies.HomeRemedie">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".Remedies.Detail" />
-        <activity android:name=".Remedies.YogaChannels">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".Authentication.Login" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".Screens.Activities.NewTipActivity" android:theme="@style/AppTheme2"></activity>
+        <activity android:name=".Screens.Activities.TipActivity"  android:theme="@style/AppTheme2"/>
+        <activity android:name=".Screens.Activities.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Authentication.Registration" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".Screens.Activities.MainActivity"
+            android:theme="@style/AppTheme2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Remedies.NewRemedie" />
-        <activity android:name=".Remedies.EditRemedie" />
-        <activity android:name=".Remedies.DeleteRemedie" />
-        <activity android:name=".Remedies.YogaVideos" />
-        <activity android:name=".Remedies.PendingRemedies"></activity>
+        <activity
+            android:name=".Screens.Activities.HomeRemedieActivity"
+            android:theme="@style/AppTheme2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Screens.Activities.DetailActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Screens.Activities.YogaChannelViedosActivity"
+            android:theme="@style/AppTheme2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Screens.Activities.LoginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Screens.Activities.RegistrationActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Screens.Activities.NewRemedieActivity"
+            android:theme="@style/AppTheme2" />
+        <activity android:name=".Screens.Activities.EditRemedieActivity" />
+        <activity android:name=".Screens.Activities.DeleteRemedieActivity" />
+        <activity android:name=".Screens.Activities.YoutubePlayerActivity" />
+        <activity android:name=".Screens.Activities.PendingRemediesActivity" />
+        <activity
+            android:name=".Screens.Activities.FavoriteActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Screens.Activities.ReviewActivity"
+            android:theme="@style/AppTheme2" />
     </application>
 
 </manifest>

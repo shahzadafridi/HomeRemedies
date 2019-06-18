@@ -1,95 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/gradient_background">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/header"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:textColor="#cccccc"
-        android:text="Edit Post"
-        android:textSize="25dp"/>
 
-    <LinearLayout
-        android:layout_below="@+id/header"
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/NewRemedie_actionBar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginTop="20dp"
-        android:padding="10dp">
-
-
-        <EditText
-            android:id="@+id/name_editRemedie"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/post_background"
-            android:backgroundTint="#ffff"
-            android:hint="   Name"
-            android:inputType="textPersonName"
-            android:textColor="#cccccc"
-            android:textSize="20sp" />
-
-
-        <EditText
-            android:id="@+id/type_editRemedie"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/post_background"
-            android:layout_marginTop="25dp"
-            android:backgroundTint="#ffff"
-            android:hint="   Type"
-            android:inputType="textPersonName"
-            android:textColor="#cccccc"
-            android:textSize="20sp" />
-
-
-        <EditText
-            android:id="@+id/detail_editRemedie"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/post_background"
-            android:backgroundTint="#ffff"
-            android:gravity="top|left"
-            android:hint="   Detail"
-            android:inputType="textMultiLine"
-            android:overScrollMode="always"
-            android:scrollbarStyle="insideInset"
-            android:scrollbars="horizontal"
-            android:textColor="#cccccc"
-            android:textColorHint="#cccccc"
-            android:textSize="20sp" />
-
+        android:background="@color/black_color"
+        android:layout_height="?attr/actionBarSize">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="75dp">
+            android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/submit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:background="#cd282727"
-                android:text="Submit"
-                android:textColor="#ffffff" />
-
-            <ProgressBar
-                android:id="@+id/progressBar_editRemedie"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:visibility="gone" />
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/sanomat_medium"
+                android:text="HOME REMEDIES AND NATURAL CARE"
+                android:textColor="#e9ffffff"
+                android:textStyle="bold"/>
+
         </RelativeLayout>
 
-    </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_below="@+id/NewRemedie_actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:textColorHint="#cccccc">
+
+                <EditText
+                    android:id="@+id/name_editRemedie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ffff"
+                    android:fontFamily="@font/sanomat_regular"
+                    android:hint="   Title"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/black_color"
+                    android:textSize="18dp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#cccccc">
+
+                <EditText
+                    android:id="@+id/type_editRemedie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ffff"
+                    android:fontFamily="@font/sanomat_regular"
+                    android:hint="   Category"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/black_color"
+                    android:textSize="18dp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#cccccc">
+
+                <EditText
+                    android:id="@+id/detail_editRemedie"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:backgroundTint="#ffff"
+                    android:fontFamily="@font/sanomat_regular"
+                    android:gravity="top|left"
+                    android:hint="   Discription"
+                    android:inputType="textMultiLine"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="outsideOverlay"
+                    android:scrollbars="vertical"
+                    android:scrollHorizontally="false"
+                    android:text=""
+                    android:textColor="#000"
+                    android:textSize="16dp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <ImageView
+                android:id="@+id/image_editRemedie"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_below="@+id/compaign_name"
+                android:layout_marginTop="15dp"
+                android:adjustViewBounds="true"
+                android:alpha="0.9"
+                android:background="@drawable/upload"
+                android:scaleType="fitXY" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp">
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:background="#000"
+                    android:fontFamily="@font/sanomat_bold"
+                    android:text="Post"
+                    android:textColor="#ffffff" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar_editRemedie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <android.support.design.widget.CoordinatorLayout
         android:id="@+id/coordinator_editRemedie"

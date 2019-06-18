@@ -6,18 +6,18 @@ package com.example.opriday.homeremedies.Model;
 
 public class Respond {
 
-    String success;
+    String status;
     String message;
 
     public Respond() {
     }
 
-    public String getSuccess() {
-        return success;
+    public String getStatus() {
+        return status;
     }
 
-    public void setSuccess(String success) {
-        this.success = success;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getMessage() {

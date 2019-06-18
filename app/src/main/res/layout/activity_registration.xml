@@ -102,7 +102,7 @@
                 android:drawableLeft="@drawable/lock"
                 android:fontFamily="@font/sanomat_regular"
                 android:hint="   Password"
-                android:inputType="textPersonName"
+                android:inputType="textPassword"
                 android:textColor="@color/black_color"
                 android:textSize="20sp" />
 

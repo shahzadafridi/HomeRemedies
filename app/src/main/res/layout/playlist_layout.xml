@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
 
     <android.support.v7.widget.CardView
@@ -16,83 +16,72 @@
         android:elevation="5dp"
         app:cardCornerRadius="6dp">
 
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <FrameLayout
-                android:id="@+id/frame"
+
+            <ImageView
+                android:id="@+id/image_playlist"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:background="#92b1e2af"
-                android:padding="3dp">
+                android:background="@drawable/backgroundlogo"
+                android:foreground="@drawable/blacktransparent"/>
 
-                <ImageView
-                    android:id="@+id/image_playlist"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/adrive_background_image"
-                    android:foreground="@drawable/blacktransparent" />
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_playlist"
+                android:background="#000">
 
                 <TextView
                     android:id="@+id/playlistTitle_playlist"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:gravity="center"
-                    android:layout_marginBottom="10dp"
-                    android:text="Daily Health Tips"
-                    android:textColor="#ebf5f4f4"
-                    android:textSize="22dp"
-                    android:textStyle="bold" />
-
-            </FrameLayout>
-
-            <RelativeLayout
-                android:layout_below="@+id/frame"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#92b1e2af">
-
-                <TextView
-                    android:id="@+id/channelName_playlist"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
                     android:layout_marginTop="2dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/sanomat_medium"
                     android:text="Channel: Daily Health Tips"
-                    android:textColor="#e45b5b5b"
-                    android:textSize="18dp"
+                    android:textColor="#fff"
+                    android:textSize="16dp"
                     android:textStyle="bold" />
-                <TextView
-                    android:id="@+id/publishAt_playlist"
-                    android:layout_below="@+id/channelName_playlist"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="publish At:21/2/2003"
-                    android:textColor="#e45b5b5b"
-                    android:textSize="14dp" />
+
                 <TextView
                     android:id="@+id/Description_playlist"
-                    android:layout_below="@+id/publishAt_playlist"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
+                    android:layout_below="@+id/playlistTitle_playlist"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/sanomat_regular"
                     android:text="Description"
-                    android:textColor="#e45b5b5b"
+                    android:textColor="#80FFFFFF"
                     android:textSize="14dp" />
-                <TextView
-                    android:layout_below="@+id/Description_playlist"
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp" />
 
+
+                <TextView
+                    android:id="@+id/publishAt_playlist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Description_playlist"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:drawableLeft="@drawable/ic_access_time_black_24dp"
+                    android:fontFamily="@font/sanomat_regular"
+                    android:text="  publish At: 21/2/2003"
+                    android:textColor="#80FFFFFF"
+                    android:textSize="10dp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/publishAt_playlist" />
             </RelativeLayout>
 
 
@@ -100,8 +89,6 @@
 
 
     </android.support.v7.widget.CardView>
-
-
 
 
 </RelativeLayout>

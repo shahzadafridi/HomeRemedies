@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Screens.Activities.ReviewActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/actionBar_review"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/black_color">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/sanomat_medium"
+                android:text="HOME REMEDIES AND NATURAL CARE"
+                android:textColor="#e9ffffff"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <RatingBar
+            android:id="@+id/rattingBar_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:numStars="5"
+            android:stepSize="1"
+            android:theme="@style/RatingBar" />
+
+
+        <TextView
+            android:id="@+id/rattingTv_item_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/description_item_review"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/sanomat_regular"
+            android:text="Review Discription"
+            android:textColor="#80000000"
+            android:textSize="14dp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edittext_background"
+            android:textColorHint="#cccccc">
+
+            <EditText
+                android:id="@+id/description_review"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:backgroundTint="#ffff"
+                android:fontFamily="@font/sanomat_regular"
+                android:gravity="top|left"
+                android:hint="   Write 150 characters review."
+                android:inputType="textMultiLine"
+                android:overScrollMode="always"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbars="vertical"
+                android:scrollHorizontally="false"
+                android:text=""
+                android:textColor="#000"
+                android:textColorHint="#80000000"
+                android:textSize="16dp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/post_review"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/login_button"
+            android:fontFamily="@font/sanomat_medium"
+            android:text="Post"
+            android:textColor="@color/text_color"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/listView_review"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

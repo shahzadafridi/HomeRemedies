@@ -2,8 +2,9 @@ package com.example.opriday.homeremedies.Network;
 
 import com.example.opriday.homeremedies.Model.Remedies;
 import com.example.opriday.homeremedies.Model.Respond;
-import com.example.opriday.homeremedies.Model.Youtube.PlayListVideos.PlayListVideoInfo;
-import com.example.opriday.homeremedies.Model.Youtube.PlayList.PlayListsInfo;
+
+import com.example.opriday.homeremedies.Model.Youtube.PlayList;
+
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -33,11 +34,11 @@ public interface IRetrofitClient {
     @GET("remedies.php/")
     Call<Respond> deleteRemedie(@Query("request_type") String request_type,@Query("id") String id);
 
-    @GET("youtube/v3/playlistItems")
-    Call<PlayListVideoInfo> getYoutubePlayListResponse(@Query("part") String part, @Query("playlistId") String playListId, @Query("key") String key, @Query("maxResults") String maxResult);
+//    @GET("youtube/v3/playlistItems")
+//    Call<PlayListVideoInfo> getYoutubePlayListResponse(@Query("part") String part, @Query("playlistId") String playListId, @Query("key") String key, @Query("maxResults") String maxResult);
 
-    @GET("youtube/v3/search")
-    Call<PlayListsInfo> getYoutubePlayListsResponse(@Query("part") String part,@Query("q") String q, @Query("type") String type, @Query("key") String key, @Query("maxResults") String maxResult);
+    @GET("playlistItems")
+    Call<PlayList> getYoutubePlayListsResponse(@Query("part") String part, @Query("playlistId") String playlistId, @Query("key") String key, @Query("maxResults") String maxResult);
 
 
 }

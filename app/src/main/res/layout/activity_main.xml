@@ -1,297 +1,340 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/backgroundlogo"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/title"
+    <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/login_actionBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/black_color">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/sanomat_medium"
+                    android:text="HOME REMEDIES AND NATURAL CARE"
+                    android:textColor="#e9ffffff"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/ic_exit_to_app_black_24dp"
+                    android:textColor="#e9ffffff"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/remedie"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="36dp"
+                android:layout_weight="0.8"
+                app:cardBackgroundColor="#fff"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/remedies" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="#fff"
+                        android:fontFamily="@font/sanomat_medium"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:text="Home Remedies"
+                        android:textColor="#000"
+                        android:textSize="16dp" />
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/Yoga"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="0.8"
+                app:cardBackgroundColor="#fff"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/yoga" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="#fff"
+                        android:fontFamily="@font/sanomat_medium"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:text="Yoga Videos"
+                        android:textColor="#000"
+                        android:textSize="16dp" />
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/health_tips"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="36dp"
+                android:layout_weight="0.8"
+                app:cardBackgroundColor="#fff"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/health_tips" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="#fff"
+                        android:fontFamily="@font/sanomat_medium"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:text="Health Tips"
+                        android:textColor="#000"
+                        android:textSize="16dp" />
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/favorite_remedie"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="0.8"
+                app:cardBackgroundColor="#fff"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/favorite" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="#fff"
+                        android:fontFamily="@font/sanomat_medium"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:text="Favorite"
+                        android:textColor="#000"
+                        android:textSize="16dp" />
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <!--<android.support.v7.widget.CardView-->
+            <!--android:id="@+id/reviews"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="140dp"-->
+            <!--android:layout_weight="0.8"-->
+            <!--android:layout_marginLeft="36dp"-->
+            <!--app:cardCornerRadius="8dp"-->
+            <!--app:cardElevation="0dp"-->
+            <!--app:cardBackgroundColor="#fff">-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical"-->
+            <!--android:weightSum="1">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="0.2"-->
+            <!--android:background="@drawable/reviews" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="#fff"-->
+            <!--android:fontFamily="@font/sanomat_medium"-->
+            <!--android:paddingTop="5dp"-->
+            <!--android:paddingLeft="5dp"-->
+            <!--android:textColor="#000"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:text="Reviews"-->
+            <!--android:textSize="16dp" />-->
+
+
+            <!--</LinearLayout>-->
+
+            <!--</android.support.v7.widget.CardView>-->
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/pending"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="0.8"
+                app:cardBackgroundColor="#fff"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/pending" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="#fff"
+                        android:fontFamily="@font/sanomat_medium"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:text="Pending"
+                        android:textColor="#000"
+                        android:textSize="16dp" />
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pbHeaderProgress"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:gravity="center"
-        android:layout_marginTop="25dp"
-        android:text="Remedies"
-        android:textColor="#c7000000"
-        android:textSize="26dp"
-        android:textStyle="bold" />
+        android:visibility="gone"
+        android:layout_marginLeft="10dp">
+    </ProgressBar>
 
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="35dp"
-        android:gravity="center_horizontal"
-        android:weightSum="3">
-
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:layout_weight="1.3"
-            android:elevation="5dp"
-            app:cardCornerRadius="6dp">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="3dp">
-
-                <ImageView
-                    android:id="@+id/image1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/adrive_background_image"
-                    android:foreground="@drawable/blacktransparent" />
-
-
-                <TextView
-                    android:id="@+id/title1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:gravity="center"
-                    android:layout_marginBottom="5dp"
-                    android:text="Home Remedies"
-                    android:textColor="#ebf5f4f4"
-                    android:textSize="22dp"
-                    android:textStyle="bold" />
-
-
-            </FrameLayout>
-
-        </android.support.v7.widget.CardView>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.1"/>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:layout_weight="1.3"
-            android:elevation="5dp"
-            app:cardCornerRadius="6dp">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="3dp">
-
-                <ImageView
-                    android:id="@+id/image2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/adrive_background_image"
-                    android:foreground="@drawable/blacktransparent" />
-
-
-                <TextView
-                    android:id="@+id/title2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:gravity="center"
-                    android:layout_marginBottom="5dp"
-                    android:text="Yoga Videos"
-                    android:textColor="#ebf5f4f4"
-                    android:textSize="22dp"
-                    android:textStyle="bold" />
-
-
-            </FrameLayout>
-
-        </android.support.v7.widget.CardView>
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp"
-        android:gravity="center_horizontal"
-        android:weightSum="3">
-
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:layout_weight="1.3"
-            android:elevation="5dp"
-            app:cardCornerRadius="6dp">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="3dp">
-
-                <ImageView
-                    android:id="@+id/image3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/adrive_background_image"
-                    android:foreground="@drawable/blacktransparent" />
-
-
-                <TextView
-                    android:id="@+id/title3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:gravity="center"
-                    android:layout_marginBottom="5dp"
-                    android:text="Daily Health Tips"
-                    android:textColor="#ebf5f4f4"
-                    android:textSize="22dp"
-                    android:textStyle="bold" />
-
-
-            </FrameLayout>
-
-        </android.support.v7.widget.CardView>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.1"/>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:layout_weight="1.3"
-            android:elevation="5dp"
-            app:cardCornerRadius="6dp">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="3dp">
-
-                <ImageView
-                    android:id="@+id/image4"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/adrive_background_image"
-                    android:foreground="@drawable/blacktransparent" />
-
-
-                <TextView
-                    android:id="@+id/title4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:gravity="center"
-                    android:layout_marginBottom="5dp"
-                    android:text="Favorite Remedies"
-                    android:textColor="#ebf5f4f4"
-                    android:textSize="22dp"
-                    android:textStyle="bold" />
-
-
-            </FrameLayout>
-
-        </android.support.v7.widget.CardView>
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp"
-        android:gravity="center_horizontal"
-        android:weightSum="3">
-
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:layout_weight="1.3"
-            android:elevation="5dp"
-            app:cardCornerRadius="6dp">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="3dp">
-
-                <ImageView
-                    android:id="@+id/image5"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/adrive_background_image"
-                    android:foreground="@drawable/blacktransparent" />
-
-
-                <TextView
-                    android:id="@+id/title5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:gravity="center"
-                    android:layout_marginBottom="5dp"
-                    android:text="Reviews"
-                    android:textColor="#ebf5f4f4"
-                    android:textSize="22dp"
-                    android:textStyle="bold" />
-
-
-            </FrameLayout>
-
-        </android.support.v7.widget.CardView>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.1"/>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:layout_weight="1.3"
-            android:elevation="5dp"
-            app:cardCornerRadius="6dp">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="3dp">
-
-                <ImageView
-                    android:id="@+id/image6"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/adrive_background_image"
-                    android:foreground="@drawable/blacktransparent" />
-
-
-                <TextView
-                    android:id="@+id/title6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:gravity="center"
-                    android:layout_marginBottom="5dp"
-                    android:text="Pending Remedies"
-                    android:textColor="#ebf5f4f4"
-                    android:textSize="22dp"
-                    android:textStyle="bold" />
-
-
-            </FrameLayout>
-
-        </android.support.v7.widget.CardView>
-
-
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>

@@ -10,6 +10,14 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    android {
+        lintOptions {
+            checkReleaseBuilds false
+            // Or, if you prefer, you can continue to check for errors in release builds,
+            // but continue the build even when errors are found:
+            abortOnError false
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -33,4 +41,5 @@ dependencies {
     implementation 'com.android.support:design:27.1.1'
     implementation 'com.squareup.okhttp3:okhttp:3.3.1'
     implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
 }

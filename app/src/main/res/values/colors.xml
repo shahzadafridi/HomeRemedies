@@ -9,4 +9,10 @@
     <color name="black_color">#292C2F</color>
     <color name="text_color">#FFFFFF</color>
     <color name="text_hint_color">#b4000000</color>
+
+    <color name="color">#ECB106</color>
+    <color name="duskYellow">#FFEB3B</color>
+    <color name="disable">#72292C2F</color>
+
+
 </resources>
