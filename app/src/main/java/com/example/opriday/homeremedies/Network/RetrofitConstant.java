@@ -11,8 +11,8 @@ import com.example.opriday.homeremedies.Network.RetrofitClient;
 
 public class RetrofitConstant {
     //Network
-   // public static String  BASE_URL = "http://192.168.43.156/";//huwaie mate10 lite
-    public static String BASE_URL="https://homeremediesandnaturalcares.000webhostapp.com/";//waqas
+    public static String  BASE_URL = "http://192.168.100.89:8000/";//huwaie mate10 lite
+//    public static String BASE_URL="https://homeremediesandnaturalcares.000webhostapp.com/";//waqas
 
     public static IRetrofitClient getService(){
         return RetrofitClient.getClient(BASE_URL).create(IRetrofitClient.class);

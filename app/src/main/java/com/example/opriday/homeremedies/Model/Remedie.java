@@ -28,7 +28,7 @@ public class Remedie {
     private String description;
     @SerializedName("picture")
     @Expose
-    private Object picture;
+    private String picture;
     @SerializedName("created_at")
     @Expose
     private String createdAt;
@@ -96,7 +96,7 @@ public class Remedie {
         return picture;
     }
 
-    public void setPicture(Object picture) {
+    public void setPicture(String picture) {
         this.picture = picture;
     }
 

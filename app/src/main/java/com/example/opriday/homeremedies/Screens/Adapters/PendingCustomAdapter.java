@@ -88,7 +88,7 @@ public class PendingCustomAdapter extends BaseAdapter implements View.OnClickLis
         }else {
             detail.setText(remedie.getDescription());
         }
-        postedBy.setText("Posted by:" + remedie.getUserName());
+        postedBy.setText(remedie.getUserName());
         approve = (TextView) convertView.findViewById(R.id.approve_pendingAdapter);
         delete = (TextView) convertView.findViewById(R.id.delete_pendingAdapter);
         approve.setTag(position);

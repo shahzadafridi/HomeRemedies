@@ -16,8 +16,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Screens.Activities.NewTipActivity" android:theme="@style/AppTheme2"></activity>
-        <activity android:name=".Screens.Activities.TipActivity"  android:theme="@style/AppTheme2"/>
+        <activity android:name=".Screens.Activities.TestUI">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Screens.Activities.NewTipActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Screens.Activities.TipActivity"
+            android:theme="@style/AppTheme2" />
         <activity android:name=".Screens.Activities.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

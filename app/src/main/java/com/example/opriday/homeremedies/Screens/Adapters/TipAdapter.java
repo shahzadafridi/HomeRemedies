@@ -60,14 +60,14 @@ public class TipAdapter extends BaseAdapter implements View.OnClickListener {
             LayoutInflater inflater = LayoutInflater.from(context);
             convertView = inflater.inflate(R.layout.tip_item, parent, false);
         }
-        postedBy = (TextView) convertView.findViewById(R.id.postedBy_tip);
+//        postedBy = (TextView) convertView.findViewById(R.id.postedBy_tip);
         title = (TextView) convertView.findViewById(R.id.title_tip);
         detail = (TextView) convertView.findViewById(R.id.description_tip);
         imageView = (ImageView) convertView.findViewById(R.id.image_tip);
         if (TextUtils.isEmpty(tip.getPicture()))
         {
         }else {
-            Picasso.get().load(RetrofitConstant.BASE_URL+tip.getPicture()).resize(500,500).into(imageView);
+            Picasso.get().load(RetrofitConstant.BASE_URL+tip.getPicture()).fit().centerCrop().into(imageView);
         }
 
         if (tip.getTitle().length() > 36){
@@ -82,7 +82,7 @@ public class TipAdapter extends BaseAdapter implements View.OnClickListener {
         }else {
             detail.setText(tip.getDescription());
         }
-        postedBy.setText("Author: admin");
+//        postedBy.setText("Author: admin");
         return convertView;
     }
     @Override

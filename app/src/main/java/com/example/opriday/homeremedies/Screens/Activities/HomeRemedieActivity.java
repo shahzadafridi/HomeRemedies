@@ -64,12 +64,15 @@ public class HomeRemedieActivity extends AppCompatActivity implements ListView.O
             public void onResponse(Call<RemedieData> call, Response<RemedieData> response) {
                 if (response != null) {
                     RemedieData data = response.body();
-                    Log.e(TAG, data.getStatus());
-                    if (data.getData() != null) {
-                        list = data.getData();
-                        adapter = new CustomAdapter(list, HomeRemedieActivity.this, coordinatorLayout);
-                        listView.setAdapter(adapter);
-                    } else {
+                    if (data != null) {
+                        if (data.getData() != null) {
+                            list = data.getData();
+                            adapter = new CustomAdapter(list, HomeRemedieActivity.this, coordinatorLayout);
+                            listView.setAdapter(adapter);
+                        }else {
+                            Log.e(TAG, "No data found.");
+                        }
+                    }else {
                         Log.e(TAG, "No resource found.");
                     }
                 }
