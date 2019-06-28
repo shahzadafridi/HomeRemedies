@@ -95,6 +95,13 @@ Link: https://drive.google.com/open?id=1J4_a6uManDR_RAQVLAjDeekpk1T_Z5LV
 
 # Demo 
 
+## Login
+![Image1](https://i.imgur.com/M12J3qD.jpg "Title")
+
+## Registration
+![Image1](https://i.imgur.com/kaMVXQ9.jpg "Title")
+
+
 ## Home Screen
 ![Image1](https://i.imgur.com/7P1dIP8.jpg "Title")
 
