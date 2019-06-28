@@ -114,6 +114,13 @@ Link: https://drive.google.com/open?id=1J4_a6uManDR_RAQVLAjDeekpk1T_Z5LV
 ## Remedies Detail
 ![Image1](https://i.imgur.com/VXsjIoZ.jpg "Title")
 
+## Post Review 
+![Image1](https://i.imgur.com/42CuLHS.jpg "Title")
+
+## Remedies Reviews
+![Image1](https://i.imgur.com/35SeSZ7.jpg "Title")
+
+
 ## Pending Remedies
 ![Image1](https://i.imgur.com/sRFWK1t.jpg "Title")
 
