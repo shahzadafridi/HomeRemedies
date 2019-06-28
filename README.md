@@ -93,6 +93,38 @@ Link: [https://www.youtube.com/channel/UCEw8TWSpI1sgcpv1_dmi8qg](https://www.you
 Here is the apk file. You can interact with the application
 Link: https://drive.google.com/open?id=1J4_a6uManDR_RAQVLAjDeekpk1T_Z5LV
 
+# Demo 
+
+## Home Screen
+![Image1](https://i.imgur.com/7P1dIP8.jpg "Title")
+
+## List of Remedies
+![Image1](https://i.imgur.com/dlmb0k4.jpg "Title")
+
+## List of Remedies
+![Image1](https://i.imgur.com/o3lRZai.jpg "Title")
+
+## Remedies Detail
+![Image1](https://i.imgur.com/VXsjIoZ.jpg "Title")
+
+## Pending Remedies
+![Image1](https://i.imgur.com/sRFWK1t.jpg "Title")
+
+## Remedies Tips
+![Image1](https://i.imgur.com/A80ORWS.jpg "Title")
+
+## Favourite Remedies
+![Image1](https://i.imgur.com/n1EzY7V.jpg "Title")
+
+## Youtube Playlists
+![Image1](https://i.imgur.com/3c7QGnT.jpg "Title")
+
+## Youtube video player
+![Image1](https://i.imgur.com/9rFYNUN.jpg "Title")
+
+## Pending Remedies
+![Image1](https://i.imgur.com/qmc2YyI.jpg "Title")
+
 ## Contact
 
  - Email:     shahzadahmadafridi@gmail.com 
