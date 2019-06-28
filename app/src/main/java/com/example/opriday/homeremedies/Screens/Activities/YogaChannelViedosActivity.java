@@ -1,5 +1,6 @@
 package com.example.opriday.homeremedies.Screens.Activities;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +18,8 @@ import com.example.opriday.homeremedies.Screens.Adapters.PlayListAdapter;
 import com.example.opriday.homeremedies.Network.IRetrofitClient;
 import com.example.opriday.homeremedies.R;
 import com.example.opriday.homeremedies.Network.RetrofitConstant;
+import com.example.opriday.homeremedies.Utility.Constant;
+import com.example.opriday.homeremedies.Utility.SharedPrefManager;
 
 import java.util.List;
 
@@ -42,7 +45,7 @@ public class YogaChannelViedosActivity extends AppCompatActivity implements Adap
         progressBar = (ProgressBar) findViewById(R.id.progressBar_channel);
         listView.setOnItemClickListener(this);
         service = RetrofitConstant.getYoutubeService();
-        service.getYoutubePlayListsResponse("snippet", "PLlHwdL_FZdYr_JUHRPwiDWY2RYc0k7YtL", "AIzaSyB8SCKdcqAs7_dHOvUwmjgLtMvnsanzX9U", "10")
+        service.getYoutubePlayListsResponse("snippet", "PLicKIlsVkGwKwfKmF9P2hXOyez4DonI-H", "AIzaSyCScfMHkayygbzerbANEYrtdv23kwehnfQ", "10")
                 .enqueue(new Callback<PlayList>() {
                     @Override
                     public void onResponse(Call<PlayList> call, Response<PlayList> response) {
@@ -51,7 +54,19 @@ public class YogaChannelViedosActivity extends AppCompatActivity implements Adap
                             Log.e(TAG, playList.getEtag());
                             List<Item> items = playList.getItems();
                             if (items != null) {
+                                String ItemsToJson = Constant.PlayListItemsToJson(items);
+                                //Store Json string in SharedPreferences.
+                                SharedPrefManager.getCustomSharedPreferencesEditor(YogaChannelViedosActivity.this, "PlayListItems", MODE_PRIVATE)
+                                        .putString("items", ItemsToJson)
+                                        .apply();
                                 adapter = new PlayListAdapter(YogaChannelViedosActivity.this, R.layout.playlist_layout, items);
+                                listView.setAdapter(adapter);
+                                progressBar.setVisibility(View.GONE);
+                            }else {
+                                //Read Json String from json file which placed in assets folder. It will read file then store json into string variable.
+                                String JSONItemsString = Constant.readJSONFromAsset(YogaChannelViedosActivity.this);
+                                List<Item> items2 = Constant.PlayListItemsFromJson(JSONItemsString); // Pass json string to the method. It will convert it into list.
+                                adapter = new PlayListAdapter(YogaChannelViedosActivity.this, R.layout.playlist_layout, items2);
                                 listView.setAdapter(adapter);
                                 progressBar.setVisibility(View.GONE);
                             }
@@ -60,7 +75,7 @@ public class YogaChannelViedosActivity extends AppCompatActivity implements Adap
 
                     @Override
                     public void onFailure(Call<PlayList> call, Throwable t) {
-
+                        Log.e(TAG, t.getMessage());
                     }
                 });
     }

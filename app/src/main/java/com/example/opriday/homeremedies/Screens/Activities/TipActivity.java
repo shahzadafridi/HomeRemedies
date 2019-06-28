@@ -106,6 +106,7 @@ public class TipActivity extends AppCompatActivity implements ListView.OnItemCli
         Bundle bundle = new Bundle();
         bundle.putString(Constant.REMEDIE_ID,""+tips.get(position).getId());
         bundle.putString(Constant.USER_ID,""+tips.get(position).getUserId());
+        bundle.putString(Constant.USER_NAME,"admin");
         bundle.putString(Constant.TITLE,tips.get(position).getTitle());
         bundle.putString(Constant.DESCRIPTION,tips.get(position).getDescription());
         bundle.putString(Constant.PICTURE,tips.get(position).getPicture());

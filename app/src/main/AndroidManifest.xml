@@ -56,7 +56,7 @@
         </activity>
         <activity
             android:name=".Screens.Activities.DetailActivity"
-            android:theme="@style/AppTheme2" />
+            android:theme="@style/MyTheme" />
         <activity
             android:name=".Screens.Activities.YogaChannelViedosActivity"
             android:theme="@style/AppTheme2">

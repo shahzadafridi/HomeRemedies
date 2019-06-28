@@ -3,44 +3,75 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:layout_margin="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:id="@+id/image_tip"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="220dp"
-        android:background="#A6A6A6" />
-    <TextView
-        android:id="@+id/title_tip"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="16dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:lines="1"
-        android:fontFamily="@font/avenir_book"
-        android:text="WHY YOU SHOULD GO TO INDONESIA"
-        android:textColor="#000000"
-        android:textSize="14dp"
-        android:textStyle="normal" />
+        android:layout_height="250dp">
+
+        <ImageView
+            android:id="@+id/image_tip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#A6A6A6" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/gradient_background"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/title_tip"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:fontFamily="@font/avenir_book"
+                android:text="WHY YOU SHOULD GO TO INDONESIA"
+                android:textColor="#FFFFFF"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/description_tip"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:fontFamily="@font/sanomat_regular"
+                android:lineSpacingExtra="6dp"
+                android:text="The purpose of this document is to explain every detail of the proposed system. What are the features and functions of the proposed system, interface of the system and what the system will be able to do?"
+                android:textColor="#FFFFFF"
+                android:textSize="13dp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/postedBy_tip"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:background="@drawable/gradient_background"
+            android:lines="1"
+            android:fontFamily="@font/avenir_book"
+            android:text="Author: admin"
+            android:textColor="#FFFFFF"
+            android:textSize="14dp"
+            android:textStyle="normal" />
+        
+
+    </FrameLayout>
 
     <TextView
-        android:id="@+id/description_tip"
-        android:layout_marginTop="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:lines="2"
-        android:fontFamily="@font/sanomat_regular"
-        android:lineSpacingExtra="6dp"
-        android:text="The purpose of this document is to explain every detail of the proposed system. What are the features and functions of the proposed system, interface of the system and what the system will be able to do?"
-        android:textColor="#777777"
-        android:textSize="13dp"
-        android:textStyle="normal" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginTop="20dp"
-        android:background="#D8D8D8"/>
-
+        android:layout_height="3dp" />
 </LinearLayout>

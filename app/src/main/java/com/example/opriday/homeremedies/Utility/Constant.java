@@ -15,10 +15,18 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 
+import com.example.opriday.homeremedies.Model.Youtube.Item;
 import com.example.opriday.homeremedies.Screens.Activities.MainActivity;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.reflect.Type;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Constant {
 
@@ -101,4 +109,38 @@ public class Constant {
     public static void requestReadExternalStoragePermission(Context context){
         ActivityCompat.requestPermissions((Activity) context, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, READ_EXTERNAL_STORAGE_CODE);
     }
+
+    public static String PlayListItemsToJson(List<Item> items) {
+        Type type = new TypeToken<List<Item>>() {
+        }.getType();
+        return new Gson().toJson(items, type);
+    }
+
+    public static List<Item> PlayListItemsFromJson(String jsonArray) {
+        Type listType = new TypeToken<List<Item>>() {
+        }.getType();
+        ArrayList<Item> detectedActivities = new Gson().fromJson(jsonArray, listType);
+        if (detectedActivities == null) {
+            detectedActivities = new ArrayList<>();
+        }
+        return detectedActivities;
+    }
+
+    public static String readJSONFromAsset(Context context) {
+        String json = null;
+        try {
+            InputStream is = context.getAssets().open("youtube_playlist_items.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
+    }
+
+
 }

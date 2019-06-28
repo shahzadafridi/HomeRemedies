@@ -2,12 +2,14 @@ package com.example.opriday.homeremedies.Screens.Activities;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +20,7 @@ import com.example.opriday.homeremedies.Network.RetrofitConstant;
 import com.example.opriday.homeremedies.R;
 import com.example.opriday.homeremedies.Utility.ActivityManager;
 import com.example.opriday.homeremedies.Utility.Constant;
+import com.squareup.picasso.Picasso;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -26,6 +29,7 @@ import retrofit2.Response;
 public class DetailActivity extends AppCompatActivity implements View.OnClickListener {
     TextView title, category, description, postedBy, date, favorite, share, reviews,delete,edit;
     Bundle getBundle;
+    ImageView imageView;
     IRetrofitFavorite favoriteClient;
     IRetrofitRemedie remedieClient;
     String TAG = "DetailActivity";
@@ -35,6 +39,10 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
         getBundle = getIntent().getExtras();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setStatusBarColor(Color.TRANSPARENT);
+        }
+        imageView = (ImageView) findViewById(R.id.collpasingImage);
         title = (TextView) findViewById(R.id.detail_title);
         category = (TextView) findViewById(R.id.detaile_category);
         description = (TextView) findViewById(R.id.remedie_detail);
@@ -66,8 +74,14 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         } else {
             delete.setVisibility(View.GONE);
         }
+        if (!TextUtils.isEmpty(getBundle.getString(Constant.PICTURE))){
+            Picasso.get().load(getBundle.getString(Constant.PICTURE)).fit().centerCrop().into(imageView);
+        }
         if (!TextUtils.isEmpty(getBundle.getString(Constant.USER_NAME))) {
             if (getBundle.getString(Constant.USER_NAME).toLowerCase().contentEquals(Constant.getUserDetail(DetailActivity.this, Constant.NAME).toLowerCase()) || Constant.getUserDetail(DetailActivity.this, Constant.NAME).toLowerCase().contentEquals("admin")) {
+                edit.setTextColor(getResources().getColor(R.color.black_color));
+                edit.setEnabled(true);
+            }else{
                 edit.setTextColor(getResources().getColor(R.color.disable));
                 edit.setEnabled(false);
             }

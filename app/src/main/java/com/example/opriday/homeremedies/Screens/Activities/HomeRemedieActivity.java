@@ -96,7 +96,7 @@ public class HomeRemedieActivity extends AppCompatActivity implements ListView.O
         bundle.putString(Constant.TYPE,list.get(position).getType());
         bundle.putString(Constant.CATEGORY,list.get(position).getCategory());
         bundle.putString(Constant.DESCRIPTION,list.get(position).getDescription());
-        bundle.putString(Constant.PICTURE,"");
+        bundle.putString(Constant.PICTURE,RetrofitConstant.BASE_URL + list.get(position).getPicture());
         bundle.putString(Constant.CREATED_AT,list.get(position).getCreatedAt());
         ActivityManager.goToDetailActivity(HomeRemedieActivity.this,bundle);
     }
