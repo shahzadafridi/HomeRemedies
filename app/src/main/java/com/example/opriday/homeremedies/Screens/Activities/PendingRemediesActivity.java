@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 
 import com.example.opriday.homeremedies.Model.Remedie;
 import com.example.opriday.homeremedies.Model.RemedieData;
@@ -32,11 +33,14 @@ public class PendingRemediesActivity extends AppCompatActivity implements ListVi
     CoordinatorLayout coordinatorLayout;
     IRetrofitRemedie remedieClient;
     String TAG = "PendingRemediesActivity";
+    ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pending_remedies);
         listView = (ListView) findViewById(R.id.listView_pending);
+        progressBar = (ProgressBar) findViewById (R.id.progressBar_pending);
         coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinator_pending);
         listView.setOnItemClickListener(this);
         remedieClient = RetrofitConstant.getRetrofitRemedieClient();
@@ -54,6 +58,7 @@ public class PendingRemediesActivity extends AppCompatActivity implements ListVi
                         list = data.getData();
                         PendingCustomAdapter adapter = new PendingCustomAdapter(list,PendingRemediesActivity.this,coordinatorLayout,remedieClient);
                         listView.setAdapter(adapter);
+                        progressBar.setVisibility(View.GONE);
                     } else {
                         Log.e(TAG, "No resource found.");
                     }

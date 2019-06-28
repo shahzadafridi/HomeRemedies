@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 
 import com.example.opriday.homeremedies.Model.Favorite;
 import com.example.opriday.homeremedies.Model.FavoriteData;
@@ -27,12 +28,14 @@ public class FavoriteActivity extends AppCompatActivity implements ListView.OnIt
     IRetrofitFavorite favoriteClient;
     List<Favorite> favorites;
     FavoriteAdapter adapter;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favorite);
         listView = (ListView) findViewById(R.id.list_favorite);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar_favourite);
         favoriteClient = RetrofitConstant.getRetrofitFavoirteClient();
         getFavoriteRemedies();
     }
@@ -47,6 +50,7 @@ public class FavoriteActivity extends AppCompatActivity implements ListView.OnIt
                    favorites = data.getData();
                    adapter = new FavoriteAdapter(favorites,FavoriteActivity.this);
                    listView.setAdapter(adapter);
+                   progressBar.setVisibility(View.GONE);
                 }
             }
 

@@ -30,6 +30,15 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <ProgressBar
+        android:id="@+id/progressBar_favourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/progressbar_bg"/>
+
+
     <ListView
         android:id="@+id/list_favorite"
         android:layout_width="match_parent"

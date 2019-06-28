@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,6 +45,8 @@ public class TipActivity extends AppCompatActivity implements ListView.OnItemCli
     ListView listView;
     TipAdapter adapter;
     List<Tip> tips;
+    ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +59,7 @@ public class TipActivity extends AppCompatActivity implements ListView.OnItemCli
     private void initUI() {
         listView = (ListView) findViewById(R.id.listView_tip);
         add = (FloatingActionButton) findViewById(R.id.add_tip);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar_tips);
         coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinator_tip);
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,6 +87,7 @@ public class TipActivity extends AppCompatActivity implements ListView.OnItemCli
                     tips = data.getData();
                     adapter = new TipAdapter(tips,TipActivity.this,coordinatorLayout);
                     listView.setAdapter(adapter);
+                    progressBar.setVisibility(View.GONE);
                 }
             }
 

@@ -12,6 +12,14 @@
         android:layout_height="match_parent"
         android:focusable="true"/>
 
+    <ProgressBar
+        android:id="@+id/progressBar_pending"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/progressbar_bg"/>
+
     <android.support.design.widget.CoordinatorLayout
         android:id="@+id/coordinator_pending"
         android:layout_width="match_parent"

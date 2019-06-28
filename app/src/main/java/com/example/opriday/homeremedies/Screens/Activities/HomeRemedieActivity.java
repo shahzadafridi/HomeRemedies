@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 
 import com.example.opriday.homeremedies.Model.Remedie;
 import com.example.opriday.homeremedies.Model.RemedieData;
@@ -37,6 +38,7 @@ public class HomeRemedieActivity extends AppCompatActivity implements ListView.O
     CoordinatorLayout coordinatorLayout;
     String TAG = "HomeRemedieActivity";
     CustomAdapter adapter;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,7 @@ public class HomeRemedieActivity extends AppCompatActivity implements ListView.O
         setContentView(R.layout.activity_home_remedie);
         listView = (ListView) findViewById(R.id.listView);
         coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinator_Remedies);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar_remedies);
         add = (FloatingActionButton) findViewById(R.id.add);
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +55,6 @@ public class HomeRemedieActivity extends AppCompatActivity implements ListView.O
                 startActivity(add);
             }
         });
-
         listView.setOnItemClickListener(this);
         remedieClient = RetrofitConstant.getRetrofitRemedieClient();
         onGetRemedies();
@@ -69,6 +71,7 @@ public class HomeRemedieActivity extends AppCompatActivity implements ListView.O
                             list = data.getData();
                             adapter = new CustomAdapter(list, HomeRemedieActivity.this, coordinatorLayout);
                             listView.setAdapter(adapter);
+                            progressBar.setVisibility(View.GONE);
                         }else {
                             Log.e(TAG, "No data found.");
                         }
